@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace PlayWithDocFX
 {
+    /// <summary>
+    /// This is the first class summary
+    /// </summary>
     public partial class FirstClass
     {
         #region Variables
+        /// <summary>
+        /// This is teh first variable which starts with "bonjour"
+        /// </summary>
         public string FirstVariable = "bonjour";
         private string FirstPrivateVariable = "testing";
         #endregion Variables
@@ -20,14 +26,33 @@ namespace PlayWithDocFX
         #endregion Properties
 
         #region Constructors
+        /// <summary>
+        /// This is the first class constructor
+        /// </summary>
         public FirstClass()
         {
+            secondClass = new SecondClass();
+        }
+        /// <summary>
+        /// This is the FirstClass constructor
+        /// </summary>
+        /// <param name="FirstPrivateProperty">The value of the first property</param>
+        public FirstClass(string FirstPrivateProperty)
+        {
+            this.FirstPrivateProperty = FirstPrivateProperty;
             secondClass = new SecondClass();
         }
         #endregion Constructors
 
         #region Functions public
-        public string GetFirstVariable()
+        /// <summary>
+        /// this is the function summary
+        /// </summary>
+        /// <param name="Bon">The bon parameter</param>
+        /// <param name="numb">Ths numb parameter</param>
+        /// <param name="secondClass">And finaly the [SectondClass](PlayWithDocFX.SecondClass.html) Param</param>
+        /// <returns>The return is important</returns>
+        public string GetFirstVariable(string Bon, int numb, SecondClass secondClass)
         {
             return FirstVariable;
         }
